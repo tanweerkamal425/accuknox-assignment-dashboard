@@ -1,0 +1,86 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "category_name": "CSPM Executive Dashboard",
+            "widgets": [
+                {
+                    "id": 1,
+                    "widget_name": "Cloud Accounts",
+                    "widget_text": "This is a sample widget text",
+                    "series": [44, 55, 41, 17, 15],
+                    "options": {
+                        "chart": {
+                            "type": "donut"
+                        },
+                        "responsive": [{
+                        "breakpoint": 480,
+                        "options": {
+                            "chart": {
+                            "width": 200
+                            },
+                            "legend": {
+                            "position": "bottom"
+                            }
+                        }
+                        }]
+                    }
+                },
+                {
+                    "id": 2,
+                    "widget_name": "Cloud Account Rist Assessment",
+                    "widget_text": "This is a sample widget text",
+                    "series": [44, 55, 41, 17, 15],
+                    "options": {
+                        "chart": {
+                            "type": "donut"
+                        },
+                        "responsive": [{
+                        "breakpoint": 480,
+                        "options": {
+                            "chart": {
+                            "width": 200
+                            },
+                            "legend": {
+                            "position": "bottom"
+                            }
+                        }
+                        }]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "category_name": "CWPP Dashboard",
+            "widgets": [
+                {
+                    "id": 3,
+                    "widget_name": "Top 5 Namespace Specific Alerts",
+                    "widget_text": "This is a sample widget text"
+                },
+                {
+                    "id": 4,
+                    "widget_name": "Workload Alerts",
+                    "widget_text": "This is a sample widget text"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category_name": "Registry Scan",
+            "widgets": [
+                {
+                    "id": 5,
+                    "widget_name": "Image Rist Assessment",
+                    "widget_text": "This is a sample widget text"
+                },
+                {
+                    "id": 6,
+                    "widget_name": "Image Security Issues",
+                    "widget_text": "This is a sample widget text"
+                }
+            ]
+        }
+    ]
+}
