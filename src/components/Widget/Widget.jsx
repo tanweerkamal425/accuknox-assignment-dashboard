@@ -14,6 +14,7 @@ const Widget = ({widget}) => {
           <p className="widget-title">{widget.widget_name}</p>
           <i onClick={() => removeWidget(widget.id)} className="fa-solid fa-xmark"></i>
         </div>
+        <p>{widget.widget_text}</p>
           {/* <Donut /> */}
       </div>
     )

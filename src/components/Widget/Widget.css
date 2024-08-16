@@ -2,8 +2,8 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 4px 12px;
     border-radius: 8px;
 }
@@ -11,10 +11,15 @@
 .widget-header {
     width: 100%;
     display: flex;
+    align-self: start;
     justify-content: space-between;
 }
 
 .widget-header i {
     color: grey;
     cursor: pointer;
+}
+
+.widget p {
+    justify-self: flex-start;
 }

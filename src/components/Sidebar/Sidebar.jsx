@@ -64,15 +64,15 @@ const Sidebar = ({setShowSidebar, menu}) => {
                 <li onClick={() => { setSidebarMenu('CSPM')}} className={sidebarMenu==='CSPM' ? 'active' : ''}>CSPM</li>
                 <li onClick={() => { setSidebarMenu('CWPP')}} className={sidebarMenu==='CWPP' ? 'active' : ''}>CWPP</li>
                 <li onClick={() => { setSidebarMenu('Image')}} className={sidebarMenu==='Image' ? 'active' : ''}>Image</li>
-                <li onClick={() => { setSidebarMenu('Ticket')}} className={sidebarMenu==='Ticket' ? 'active' : ''}>Ticket</li>
+                {/* <li onClick={() => { setSidebarMenu('Ticket')}} className={sidebarMenu==='Ticket' ? 'active' : ''}>Ticket</li> */}
             </ul>
             {!showAddForm ? <button onClick={() => setShowAddForm(true)} className='confirm-btn'>Add</button> : <></>}
             {
                 showAddForm ? 
                 <form onSubmit={handleSubmit} className="sidebar-widget-add-form">
                     <p onClick={() => setShowAddForm(false)}>X</p>
-                    <input onChange={handleInputChange} name='widget_name' value={newWidget.widget_name} type="text" placeholder='widget name' />
-                    <input onChange={handleInputChange} name='widget_text' value={newWidget.widget_text} type="text" placeholder='widget text' />
+                    <input required onChange={handleInputChange} name='widget_name' value={newWidget.widget_name} type="text" placeholder='widget name' />
+                    <input required onChange={handleInputChange} name='widget_text' value={newWidget.widget_text} type="text" placeholder='widget text' />
                     <button className='confirm-btn toggle'>Add</button>
                 </form> : <></>
             }

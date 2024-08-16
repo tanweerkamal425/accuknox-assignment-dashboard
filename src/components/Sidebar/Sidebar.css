@@ -166,3 +166,14 @@
         right: 0;
     }
 }
+
+@media (max-width: 750px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .cancel-btn,.confirm-btn {
+        font-size: 10px;
+        padding: 8px 14px;
+    }
+}
