@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Navbar.css'
 
 const Navbar = ({setSearchInput}) => {
-    const [menu, setMenu] = useState('home')
+    const [menu, setMenu] = useState('dashboard')
     const handleChange = (event) => {
         setSearchInput(event.target.value);
     }

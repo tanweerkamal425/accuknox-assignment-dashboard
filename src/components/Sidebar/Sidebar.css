@@ -37,6 +37,10 @@
     cursor: pointer;
 }
 
+.sidebar-top .sidebar-cross:hover {
+    color: red;
+}
+
 .sidebar p {
     margin-top: 4px;
 }
@@ -81,6 +85,10 @@
     right: 16px;
     top: 2px;
     cursor: pointer;
+}
+
+.sidebar-widget-add-form p:hover {
+    color: red;
 }
 
 .sidebar-widget-add-form input {
@@ -164,6 +172,16 @@
     100% {
         position: absolute;
         right: 0;
+    }
+}
+
+@media (max-width: 1050px) {
+    .sidebar {
+        width: 50vw;
+    }
+
+    .cancel-btn, .confirm-btn {
+        font-size: 14px;
     }
 }
 

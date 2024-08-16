@@ -3,7 +3,7 @@ import './Category.css'
 import Widget from '../Widget/Widget'
 import { StoreContext } from '../../context/StoreContext'
 
-const Category = ({category, setShowSidebar, setSidebarMenu, searchInput}) => {
+const Category = ({category, setShowSidebar, setSidebarMenu, query}) => {
     const {widgetItems} = useContext(StoreContext);
 
     const handleClick = () => {
@@ -17,10 +17,13 @@ const Category = ({category, setShowSidebar, setSidebarMenu, searchInput}) => {
             <div className="widget-list">
                 {
                     category.widgets.map((widget, idx) => {
-                        if (widgetItems.includes(String(widget.id))) { 
-                            return <Widget key={idx} widget={widget} />
+                        if (widgetItems.includes(String(widget.id))) {
+                            if (query.length > 0 && widget.widget_name.toLowerCase().includes(query.toLowerCase()))
+                                return <Widget key={idx} widget={widget} />
+                            else if (query.length === 0) {
+                                return <Widget key={idx} widget={widget} />
+                            }
                         }
-                        return null 
                     })
                 }
                 <div className="add-widget">

@@ -20,6 +20,10 @@
     cursor: pointer;
 }
 
+.widget-header i:hover {
+    color: red;
+}
+
 .widget p {
     justify-self: flex-start;
 }

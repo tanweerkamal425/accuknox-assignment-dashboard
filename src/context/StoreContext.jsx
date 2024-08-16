@@ -7,11 +7,7 @@ const StoreContextProvider = (props) => {
     const [widgetItems, setWidgetItem] = useState([]);
     const [categories, setCategory] = useState([...data]);
     const [widgetId, setWidgetId] = useState(0);
-    console.log(categories);
 
-    useEffect(() => {
-        console.log(calculateWidgetId())
-    }, [])
 
     const addWidget = (widgetIds) => {
         setWidgetItem([]);
@@ -25,7 +21,6 @@ const StoreContextProvider = (props) => {
     const addNewWidget = (widget, type) => {
         let id = calculateWidgetId();
         widget["id"] = id + 1;
-        console.log(widget["id"])
         setCategory((prevCategories) =>
                 prevCategories.map((category, i) => 
                     type===category.type ? {...category, widgets: [...category.widgets, widget]} : category

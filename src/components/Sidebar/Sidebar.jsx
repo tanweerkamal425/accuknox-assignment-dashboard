@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Sidebar.css'
 import { StoreContext } from '../../context/StoreContext'
 import SidebarWidgetList from '../../SidebarWidgetList/SidebarWidgetList'
-import AddWidgetForm from '../AddWidgetForm/AddWidgetForm'
 
 const Sidebar = ({setShowSidebar, menu}) => {
     const [sidebarMenu, setSidebarMenu] = useState('CSPM')
@@ -27,7 +26,6 @@ const Sidebar = ({setShowSidebar, menu}) => {
     }
 
     useEffect(() => {
-        console.log(menu);
         if (menu != null) {
             setSidebarMenu(menu);
         }
@@ -48,7 +46,7 @@ const Sidebar = ({setShowSidebar, menu}) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         addNewWidget(newWidget, sidebarMenu)
-        
+        setNewWidget({id: 0, widget_name: '', widget_text: ''})        
     }
 
   return (
@@ -57,7 +55,7 @@ const Sidebar = ({setShowSidebar, menu}) => {
         <div className="sidebar">
             <div className="sidebar-top">
                 <p className='sidebar-title'>Add Widget</p>
-                <p onClick={() => setShowSidebar(false)} className='sidebar-cross'>X</p>
+                <p onClick={() => setShowSidebar(false)} className='sidebar-cross'><i className="fa-solid fa-xmark"></i></p>
             </div>
             <p>Personalize your dashbaord by adding the following widget</p>
             <ul className='sidebar-menu'>
@@ -70,7 +68,7 @@ const Sidebar = ({setShowSidebar, menu}) => {
             {
                 showAddForm ? 
                 <form onSubmit={handleSubmit} className="sidebar-widget-add-form">
-                    <p onClick={() => setShowAddForm(false)}>X</p>
+                    <p onClick={() => setShowAddForm(false)}><i className="fa-solid fa-xmark"></i></p>
                     <input required onChange={handleInputChange} name='widget_name' value={newWidget.widget_name} type="text" placeholder='widget name' />
                     <input required onChange={handleInputChange} name='widget_text' value={newWidget.widget_text} type="text" placeholder='widget text' />
                     <button className='confirm-btn toggle'>Add</button>

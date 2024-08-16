@@ -13,7 +13,6 @@ const App = () => {
   const {categories} = useContext(StoreContext);
   const [sidebarMenu, setSidebarMenu] = useState(null);
   const [searchInput, setSearchInput] = useState('');
-  console.log(searchInput);
 
   return (
     <>
@@ -25,7 +24,7 @@ const App = () => {
           <Header setShowSidebar={setShowSidebar} />
           {
             categories.map((item, i) => {
-              return <Category setSidebarMenu={setSidebarMenu} setShowSidebar={setShowSidebar} key={i} category={item} />
+              return <Category query={searchInput} setSidebarMenu={setSidebarMenu} setShowSidebar={setShowSidebar} key={i} category={item} />
             })
           }
         </div>
