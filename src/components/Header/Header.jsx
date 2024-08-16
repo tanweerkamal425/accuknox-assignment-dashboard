@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 
 const Header = ({setShowSidebar}) => {
+
   return (
     <div className="header">
         <p className="header-title">CNAPP Dashboard</p> 

@@ -3,8 +3,13 @@ import './Category.css'
 import Widget from '../Widget/Widget'
 import { StoreContext } from '../../context/StoreContext'
 
-const Category = ({category}) => {
+const Category = ({category, setShowSidebar, setSidebarMenu, searchInput}) => {
     const {widgetItems} = useContext(StoreContext);
+
+    const handleClick = () => {
+        setSidebarMenu(category.type);
+        setShowSidebar(true);
+    }
 
     return (
         <div className="category">
@@ -19,7 +24,7 @@ const Category = ({category}) => {
                     })
                 }
                 <div className="add-widget">
-                    <button className="widget-button">+Add Widget</button>
+                    <button onClick={handleClick} className="widget-button">+Add Widget</button>
                 </div>
             </div>
         </div>

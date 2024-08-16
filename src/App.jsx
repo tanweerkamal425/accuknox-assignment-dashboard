@@ -11,23 +11,26 @@ const App = () => {
   // const [items, setItems] = useState([...data.categories]);
   const [showSidebar, setShowSidebar] = useState(false);
   const {categories} = useContext(StoreContext);
+  const [sidebarMenu, setSidebarMenu] = useState(null);
+  const [searchInput, setSearchInput] = useState('');
+  console.log(searchInput);
 
   return (
     <>
       <div className="app">
-        <Navbar />
+        <Navbar setSearchInput={setSearchInput} />
       </div>
       <div className="container">
         <div className="wrapper">
           <Header setShowSidebar={setShowSidebar} />
           {
             categories.map((item, i) => {
-              return <Category key={i} category={item} />
+              return <Category setSidebarMenu={setSidebarMenu} setShowSidebar={setShowSidebar} key={i} category={item} />
             })
           }
         </div>
       </div>
-      {showSidebar ? <Sidebar setShowSidebar={setShowSidebar} /> : <></>}
+      {showSidebar ? <Sidebar menu={sidebarMenu} setShowSidebar={setShowSidebar} /> : <></>}
     </>
   )
 }

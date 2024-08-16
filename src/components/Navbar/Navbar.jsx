@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({setSearchInput}) => {
     const [menu, setMenu] = useState('home')
+    const handleChange = (event) => {
+        setSearchInput(event.target.value);
+    }
 
     return (
         <div className="navbar">
@@ -13,7 +16,7 @@ const Navbar = () => {
             <div className="navbar-right">
                 <div className="search-box">
                     <i className="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder='Search anything...' />
+                    <input onChange={handleChange} type="text" placeholder='Search anything...' />
                 </div>
             </div>
         </div>

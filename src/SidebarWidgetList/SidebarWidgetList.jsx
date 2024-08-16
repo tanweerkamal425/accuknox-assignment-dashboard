@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './SidebarWidgetList.css'
 import { StoreContext } from '../context/StoreContext';
 
-const SidebarWidgetList = ({widgetArr, handleCheckboxCheck, checkedIds}) => {
+const SidebarWidgetList = ({widgetArr, handleCheckboxCheck}) => {
     const {widgetItems} = useContext(StoreContext);
 
     return (

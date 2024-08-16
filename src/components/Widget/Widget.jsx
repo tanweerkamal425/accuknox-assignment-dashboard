@@ -7,22 +7,6 @@ import { StoreContext } from '../../context/StoreContext'
 
 const Widget = ({widget}) => {
     const {removeWidget} = useContext(StoreContext);
-    // const [data, setData] = useState({
-    //     labels: [
-    //         'Connected',
-    //         'Not connected',
-    //       ],
-    //       datasets: [{
-    //         label: 'My First Dataset',
-    //         data: [50, 50],
-    //         backgroundColor: [
-    //           'rgb(255, 99, 132)',
-    //           'rgb(54, 162, 235)',
-    //           'rgb(255, 205, 86)'
-    //         ],
-    //         hoverOffset: 4
-    //       }]
-    // })
 
     return (
       <div className="widget">
@@ -30,7 +14,7 @@ const Widget = ({widget}) => {
           <p className="widget-title">{widget.widget_name}</p>
           <i onClick={() => removeWidget(widget.id)} className="fa-solid fa-xmark"></i>
         </div>
-          <Donut />
+          {/* <Donut /> */}
       </div>
     )
 }
