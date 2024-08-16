@@ -1,0 +1,30 @@
+.category {
+    width: 97%;
+    margin: auto;
+    margin-top: 24px;
+}
+
+.category-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.widget-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 200px);
+    gap: 10px;
+}
+
+.add-widget {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget-button {
+    background: white;
+    border: 1px solid #a2a2a2;
+    padding: 4px 8px;
+}

@@ -1,0 +1,20 @@
+.widget {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+.widget-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget-header i {
+    color: grey;
+    cursor: pointer;
+}

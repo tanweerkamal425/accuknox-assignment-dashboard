@@ -1,17 +1,13 @@
 import React from 'react'
 import './Header.css'
 
-const Header = () => {
+const Header = ({setShowSidebar}) => {
   return (
-    <div className="container">
-        <div className="wrapper">
-            <div className="header">
-                <p className="header-title">CNAPP Dashboard</p> 
-                <div className="header-right">
-                    <button className='widget-button'>+Add Widget</button>
-                </div>           
-            </div>
-        </div>
+    <div className="header">
+        <p className="header-title">CNAPP Dashboard</p> 
+        <div className="header-right">
+            <button onClick={() => setShowSidebar(true)} className='widget-button'>Add Widget +</button>
+        </div>           
     </div>
   )
 }
