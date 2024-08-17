@@ -15,7 +15,12 @@ To run the project locally.
 Clone the repository:
 ```bash
 git clone https://github.com/tanweerkamal425/accuknox-assignment-dashboard
+```
 
+## To run the 
+
+```bash
 cd accuknox-assignment-dashboard
 npm install
 npm run dev
+```
