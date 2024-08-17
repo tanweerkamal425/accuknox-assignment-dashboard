@@ -10,6 +10,12 @@ Currently, two official plugins are available:
 
 To run the project locally.
 
-cd project-folder (to navigate inside the project folder)
+## Setup
+
+Clone the repository:
+```bash
+git clone https://github.com/tanweerkamal425/accuknox-assignment-dashboard
+
+cd accuknox-assignment-dashboard
 npm install
 npm run dev
