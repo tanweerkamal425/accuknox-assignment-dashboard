@@ -17,7 +17,7 @@ Clone the repository:
 git clone https://github.com/tanweerkamal425/accuknox-assignment-dashboard
 ```
 
-## To run the 
+## To run the project locally
 
 ```bash
 cd accuknox-assignment-dashboard
